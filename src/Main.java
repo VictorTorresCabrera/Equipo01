@@ -1,4 +1,4 @@
-import java.util.Scanner;
+Import java.util.Scanner;
 
 public class Main {
     
@@ -19,7 +19,7 @@ public class Main {
                 //verificarPar(scanner);
                 break;
             case 2:
-                //verificarDivisiblePorTres(scanner);
+                System.out.println(esDivisiblePortres(scanner));
                 break;
             case 3:
                 //verificarDivisiblePorCinco(scanner);
@@ -33,5 +33,9 @@ public class Main {
         }
         
         scanner.close();
+    }
+
+    public static boolean esDivisiblePortres(double num){
+        return num/3==0;
     }
 }
