@@ -1,11 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-    
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
 
         System.out.println("Elige una opción:");
         System.out.println("1. Verificar si un número es par.");
@@ -14,15 +12,21 @@ public class Main {
         System.out.println("4. Salir.");
         int opcion = scanner.nextInt();
 
-        switch(opcion) {
+        switch (opcion) {
             case 1:
-                //verificarPar(scanner);
+                // verificarPar(scanner);
                 break;
             case 2:
-                //verificarDivisiblePorTres(scanner);
+                // verificarDivisiblePorTres(scanner);
                 break;
             case 3:
-                //verificarDivisiblePorCinco(scanner);
+                System.out.print("Introduce un número: ");
+                int numero = scanner.nextInt();
+                if (esDivisiblePorCinco(numero)) {
+                    System.out.println("El número es divisible por 5.");
+                } else {
+                    System.out.println("El número no es divisible por 5.");
+                }
                 break;
             case 4:
                 System.out.println("Saliendo...");
@@ -31,7 +35,14 @@ public class Main {
                 System.out.println("Opción no válida. Por favor, elige una opción válida.");
                 break;
         }
-        
+
         scanner.close();
     }
+
+    public static boolean esDivisiblePorCinco(int numero) {
+        return numero % 5 == 0;
+    }
+
+
+    //hola
 }
