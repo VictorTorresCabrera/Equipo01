@@ -16,7 +16,8 @@ public class Main {
 
         switch(opcion) {
             case 1:
-                //verificarPar(scanner);
+                System.out.println("Introduce un numero para saber si es par :P");
+                System.out.println(esPar(scanner););
                 break;
             case 2:
                 //verificarDivisiblePorTres(scanner);
@@ -33,5 +34,8 @@ public class Main {
         }
         
         scanner.close();
+    }
+    public static boolean esPar(int numero) {
+        return numero % 2 == 0;
     }
 }
