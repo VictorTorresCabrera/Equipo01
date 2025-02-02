@@ -14,10 +14,12 @@ public class Main {
 
         switch (opcion) {
             case 1:
-                // verificarPar(scanner);
+                System.out.println("Introduce un numero para saber si es par :P");
+                System.out.println(esPar(scanner.nextInt())); // Corregido: ahora se pasa el número ingresado
                 break;
             case 2:
-                // verificarDivisiblePorTres(scanner);
+                System.out.print("Introduce un número: ");
+                System.out.println(esDivisiblePortres(scanner.nextInt())); // Corregido: se pasa un número a la función
                 break;
             case 3:
                 System.out.print("Introduce un número: ");
@@ -39,10 +41,17 @@ public class Main {
         scanner.close();
     }
 
+    public static boolean esDivisiblePortres(int num){ // Cambiado el tipo de parámetro a int
+        return num % 3 == 0; // Corregido la lógica de divisibilidad por 3
+    }
+
+    public static boolean esPar(int numero) {
+        return numero % 2 == 0;
+    }
+
     public static boolean esDivisiblePorCinco(int numero) {
         return numero % 5 == 0;
     }
-
 
     //hola
 
